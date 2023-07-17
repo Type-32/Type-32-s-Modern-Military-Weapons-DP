@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:ender_eye"],
+          "nbt": "{TMMW_ID:{}}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "tmmw:functional/input/right_click_detection"
+  },
+  "sends_telemetry_event": false
+}

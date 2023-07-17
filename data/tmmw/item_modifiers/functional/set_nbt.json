@@ -1,0 +1,25 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "tmmw:gun"
+    },
+    "ops": [
+      {
+        "source": "tmmw.stats",
+        "target": "tmmw.stats",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": {
+      "nbt": "Text1",
+      "block": "0 -63 0",
+      "interpret": true
+    }
+  }
+]
