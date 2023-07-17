@@ -7,8 +7,8 @@
     },
     "ops": [
       {
-        "source": "tmmw.stats",
-        "target": "tmmw.stats",
+        "source": "TMMW_ID.stats",
+        "target": "TMMW_ID.stats",
         "op": "replace"
       }
     ]

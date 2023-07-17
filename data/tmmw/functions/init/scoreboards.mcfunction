@@ -10,7 +10,15 @@ scoreboard objectives add tmmw.ad dummy
 #autofire - Auto-Fire is the number of shots that will execute after the player has pressed the button. The total amount of shots fired per action is x+1, whereas x is the value of tmmw.af.
 scoreboard objectives add tmmw.af dummy
 
-#Right Click & Previous RC
+#Right Click
 scoreboard objectives add tmmw.r_click dummy
+
+#Gun Ops
 scoreboard objectives add tmmw.gun dummy
 scoreboard objectives add tmmw.gunid dummy
+
+#States
+scoreboard objectives add tmmw.sneak dummy
+scoreboard objectives add tmmw.sprint dummy
+
+scoreboard players set .draw-time tmmw.stats 10

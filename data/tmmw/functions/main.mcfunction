@@ -12,3 +12,14 @@ execute if entity @s[scores={tmmw.ad=0,tmmw.af=1..}] run function tmmw:functiona
 
 execute if entity @s[advancements={tmmw:functional/input/right_click_detection=true}] run function tmmw:functional/core/check_held
 
+#Sneaking & Sprinting
+scoreboard players operation .sneak tmmw.gun = @s tmmw.sneak
+scoreboard players set @s tmmw.sneak 0
+scoreboard players operation .sprint tmmw.gun = @s tmmw.sprint
+scoreboard players set @s tmmw.sprint 0
+
+execute if score .id tmmw.stats matches 1.. if predicate tmmw:functional/state/is_sneaking unless predicate tmmw:functional/state/is_sprinting run function tmmw:functional/input/sneaking
+execute if score .id tmmw.stats matches 1.. if predicate tmmw:functional/state/is_sprinting run function tmmw:functional/input/sprinting
+
+execute if score .sneak tmmw.gun matches 1 if score @s tmmw.sneak matches 0 run function tmmw:functional/input/unsneaking
+execute if score .sprint tmmw.gun matches 1 if score @s tmmw.sprint matches 0 run function tmmw:functional/input/unsprinting
