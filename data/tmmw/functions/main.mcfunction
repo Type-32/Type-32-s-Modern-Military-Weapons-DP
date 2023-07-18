@@ -1,4 +1,6 @@
-execute store result score .id tmmw.stats run data get entity @s SelectedItem.tag.TMMW_ID.stats.id
+data modify storage tmmw:gun TMMW_ID set from entity @s SelectedItem.tag.TMMW_ID
+
+execute store result score .id tmmw.stats run data get storage tmmw:gun TMMW_ID.id
 execute unless score .id tmmw.stats = @s tmmw.gunid run function tmmw:functional/core/gun_swapped
 scoreboard players operation @s tmmw.gunid = .id tmmw.stats
 
@@ -23,3 +25,6 @@ execute if score .id tmmw.stats matches 1.. if predicate tmmw:functional/state/i
 
 execute if score .sneak tmmw.gun matches 1 if score @s tmmw.sneak matches 0 run function tmmw:functional/input/unsneaking
 execute if score .sprint tmmw.gun matches 1 if score @s tmmw.sprint matches 0 run function tmmw:functional/input/unsprinting
+
+execute if score .save tmmw.stats matches 1 run function tmmw:functional/core/set_attr
+scoreboard players set .loaded tmmw.stats 0

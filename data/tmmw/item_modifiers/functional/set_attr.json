@@ -7,8 +7,8 @@
     },
     "ops": [
       {
-        "source": "TMMW_ID",
-        "target": "TMMW_ID",
+        "source": "TMMW_ID.attributes",
+        "target": "TMMW_ID.attributes",
         "op": "replace"
       }
     ]

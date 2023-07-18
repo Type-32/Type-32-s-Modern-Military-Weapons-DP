@@ -1,3 +1,5 @@
+execute if score .loaded tmmw.stats matches 0 run function tmmw:functional/core/fetch_attr
+
 scoreboard players set @s tmmw.cd 0
 scoreboard players set @s tmmw.af 0
 scoreboard players set @s tmmw.ad 0
