@@ -7,3 +7,4 @@ execute store result score .semi-auto tmmw.stats run data get storage tmmw:gun T
 execute store result score .max-ammo tmmw.stats run data get storage tmmw:gun TMMW_ID.attributes.MaxAmmo
 execute store result score .ammo tmmw.stats run data get storage tmmw:gun TMMW_ID.attributes.Ammo
 execute store result score .ammo-type tmmw.stats run data get storage tmmw:gun TMMW_ID.attributes.AmmoType
+execute store result score .catridge-type tmmw.stats run data get storage tmmw:gun TMMW_ID.attributes.CatridgeType
